@@ -56,8 +56,7 @@ def main(IP, PORT):
             while True:
                 time.sleep(0.1)
                 print tracker.getTargetPosition()
-                print tracker.isTargetLost()
-                if tracker.isTargetLost():
+                if tracker.getTargetPosition() == []:
                     lookingForTheBall()
         except KeyboardInterrupt:
             print
@@ -88,4 +87,4 @@ def main(IP, PORT):
 
 
 if __name__ == "__main__" :
-    main("192.168.162.139",9559)
+    main("192.168.137.27",9559)
